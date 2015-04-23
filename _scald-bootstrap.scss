@@ -1,0 +1,79 @@
+/*!
+ * Scald Bootstrap Plugin v0.1.0
+ * https://github.com/krystalcode/scald-bootstrap
+ * Copyright (c) 2015 Dimitris Bozelos
+ * Licensed under MIT (https://github.com/krystalcode/scald-bootstrap/LICENSE)
+ */
+
+// @Issue("Tidy up, test on a clean project and add comments")
+
+/**
+ * Add a right margin to the main container on node form pages so that the Scald
+ * DND Library does not get on top of the content.
+ */
+body.page-node-add,
+body.page-node-edit,
+body.page-node-revisions-edit {
+  .main-container {
+    margin-right: 42px;
+  }
+}
+body.page-atom {
+  .field {
+    margin-top: 10px;
+  }
+}
+.field-type-taxonomy-term-reference {
+  .field-item {
+    display: inline-block;
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.field-type-atom-reference {
+  .field-multiple-table {
+    thead > tr > th {
+      label {
+        margin-bottom: 0;
+      }
+    }
+    tbody > tr > td {
+      border: 0;
+
+      label {
+        display: none;
+      }
+    }
+    td.field-multiple-drag {
+      width: 0;
+      padding-right: 0;
+
+      .tabledrag-handle {
+
+        .handle {
+          margin: -9px 0 0px 7px;
+          padding: 2px 7px 0px 8px;
+        }
+      }
+    }
+  }
+}
+
+.atom_reference_drop_zone {
+  padding: 20px;
+  margin-bottom: 5px;
+
+  img {
+    width: 100%;
+  }
+}
+
+#scald-atom-add-form-add {
+  .wizard-trail {
+    display: none;
+  }
+}
